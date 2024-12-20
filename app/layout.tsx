@@ -1,6 +1,10 @@
+/* eslint-disable import/order */
+/* eslint-disable prettier/prettier */
+
+
+
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 
 import { Providers } from "./providers";
@@ -8,6 +12,20 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
+import SmoothScroller from "@/components/ui/scroll/Scrool";
+import { Element } from "react-scroll";
+
+import { ReactNode } from "react";
+
+interface RootLayout {
+  children: ReactNode;
+  about: ReactNode;
+  education: ReactNode;
+  skills: ReactNode;
+  projects: ReactNode;
+  blogs: ReactNode;
+  contact: ReactNode;
+}
 
 export const metadata: Metadata = {
   title: {
@@ -27,11 +45,7 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children, about, skills, projects, blogs, education, contact }: RootLayout) {
   return (
     <html suppressHydrationWarning lang="en">
       <head />
@@ -44,9 +58,26 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main>
+            <SmoothScroller />
+
+            <div id="home">
               {children}
-            </main>
+            </div>
+            <div id="about">
+              {about}
+            </div>
+            <div id="skills">
+              {skills}
+            </div>
+            <div id="projects">
+              {projects}
+            </div>
+            <div id="blogs">
+              {blogs}
+            </div>
+            
+            
+
           </div>
         </Providers>
       </body>
