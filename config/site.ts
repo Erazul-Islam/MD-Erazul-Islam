@@ -1,62 +1,66 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + NextUI",
+  name: "MD ERAZUL ISLAM",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
       label: "Home",
-      href: "/",
+      href: "#",
     },
     {
       label: "About",
-      href: "/about",
+      href: "#about",
     },
     {
       label: "Skills",
-      href: "/docs",
+      href: "#skills",
     },
     {
       label: "Projects",
-      href: "/pricing",
+      href: "#project",
     },
     {
       label: "Blog",
-      href: "/blog",
+      href: "#blog",
+    },
+    {
+      label: "Education",
+      href: "#education",
+    },
+    {
+      label: "Contact",
+      href: "#contact",
     },
   ],
   navMenuItems: [
     {
-      label: "Profile",
-      href: "/profile",
+      label: "Home",
+      href: "#",
     },
     {
-      label: "Dashboard",
-      href: "/dashboard",
+      label: "About",
+      href: "#about",
+    },
+    {
+      label: "Skills",
+      href: "#skills",
     },
     {
       label: "Projects",
-      href: "/projects",
+      href: "#project",
     },
     {
-      label: "Team",
-      href: "/team",
+      label: "Blog",
+      href: "#blog",
     },
     {
-      label: "Calendar",
-      href: "/calendar",
+      label: "Education",
+      href: "#education",
     },
     {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
+      label: "Contact",
+      href: "#contact",
     },
   ],
   links: {

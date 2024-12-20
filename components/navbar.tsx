@@ -21,9 +21,12 @@ import { Link as ScrollLink } from 'react-scroll';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
+
 import {
   TwitterIcon,
   GithubIcon,
@@ -35,6 +38,7 @@ import {
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
+import ContactIcon from "@/shared/icons/icons";
 
 
 export const Navbar = () => {
@@ -63,7 +67,7 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar maxWidth="xl" position="sticky">
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
+      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         {/* <NavbarBrand className="gap-3 max-w-fit">
           <Logo />
         </NavbarBrand> */}
@@ -102,20 +106,10 @@ export const Navbar = () => {
           ))}
         </div>
       </NavbarContent>
-      <NavbarContent>
-        <NavbarItem style={{ fontSize: "30px" }}>
-          <motion.div className="flex gap-4">
-            <FaLinkedin />
-            <FaGithub />
-            <FaDiscord />
-          </motion.div>
-        </NavbarItem>
+      <NavbarContent justify="center">
+        <ContactIcon/>
       </NavbarContent>
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link>
-        <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
       <NavbarMenu>
@@ -130,7 +124,6 @@ export const Navbar = () => {
                       ? "danger"
                       : "foreground"
                 }
-                href="#"
                 size="lg"
               >
                 {item.label}
