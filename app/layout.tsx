@@ -13,7 +13,6 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import SmoothScroller from "@/components/ui/scroll/Scrool";
-import { Element } from "react-scroll";
 
 import { ReactNode } from "react";
 
@@ -75,9 +74,6 @@ export default function RootLayout({ children, about, skills, projects, blogs, e
             <div id="blogs">
               {blogs}
             </div>
-            
-            
-
           </div>
         </Providers>
       </body>
