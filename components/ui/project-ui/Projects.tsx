@@ -9,7 +9,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { useState } from "react";
-import { MotionButton } from "../button/MovingButton";
+
 
 const Card3D = () => {
     const projects = [
@@ -40,7 +40,7 @@ const Card3D = () => {
     ];
 
     return (
-        <div className="relative flex justify-center items-center overflow-hidden p-8">
+        <div className="relative flex justify-center items-center overflow-hidden pl-8 pr-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ml-[40px] lg:ml-[230px] lg:mr-[65px] w-full">
                 {projects.map((project, index) => {
                     const [isFlipped, setIsFlipped] = useState(false);

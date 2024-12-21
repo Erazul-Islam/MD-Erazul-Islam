@@ -58,21 +58,23 @@ export default function RootLayout({ children, about, skills, projects, blogs, e
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <SmoothScroller />
-
             <div id="home">
               {children}
             </div>
             <div id="skills">
               {skills}
             </div>
-            <div id="about">
-              {about}
-            </div>
             <div id="projects">
               {projects}
             </div>
             <div id="blogs">
               {blogs}
+            </div>
+            <div id="about">
+              {about}
+            </div>
+            <div id="contact">
+              {contact}
             </div>
           </div>
         </Providers>
