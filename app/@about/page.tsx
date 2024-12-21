@@ -4,10 +4,12 @@
 
 import React from 'react';
 
+import Journey from '@/components/ui/about-ui/Journey';
+
 const About = () => {
     return (
         <div>
-            about
+            <Journey/>
         </div>
     );
 };

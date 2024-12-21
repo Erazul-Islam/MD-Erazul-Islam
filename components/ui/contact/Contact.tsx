@@ -11,7 +11,6 @@
 import { motion, useInView } from "framer-motion"
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
-import { Button, Input, Textarea } from "@nextui-org/react";
 
 const variants = {
     initial: {
