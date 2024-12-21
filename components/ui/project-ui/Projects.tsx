@@ -80,7 +80,6 @@ const Card3D = () => {
                                     <h1 className="text-2xl font-serif">{project.name}</h1>
                                     <button
                                         className="mt-4 px-6 py-2 bg-none rounded-md border font-serif border-pink-800 text-white"
-                                        
                                     >
                                         View Project
                                     </button>
@@ -89,8 +88,8 @@ const Card3D = () => {
                                 {/* Back Side */}
                                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-none text-white rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]">
                                     <h1 className="text-xl font-bold">Project Details</h1>
-                                    <p className="mt-2 text-center text-sm">{project.details}</p>
-                                    <div className="mt-4 ml-5">
+                                    <p className="mt-2 ml-4 mr-4 text-center text-sm">{project.details}</p>
+                                    <div className="mt-4 ml-20">
                                         <button className="mt-4 px-6 py-2 bg-none rounded-md border font-serif border-pink-800 text-white"><Link href={project.liveLink}>Live</Link></button>
                                         <button className="mt-4 px-6 py-2 bg-none rounded-md border font-serif border-pink-800 text-white"><Link href={project.clientRepo}>Client Repository</Link></button><br />
                                         <button className="mt-4 px-6 py-2 bg-none rounded-md border font-serif border-pink-800 text-white"><Link href={project.backendRepo}>Backend Repository</Link></button>
