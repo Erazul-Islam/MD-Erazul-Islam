@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* eslint-disable prettier/prettier */
 
 "use client"
@@ -9,33 +10,11 @@ import {
   NavbarMenuToggle,
   NavbarItem,
   NavbarMenuItem,
-  NavbarBrand,
 } from "@nextui-org/navbar";
-import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
-import { link as linkStyles } from "@nextui-org/theme";
 import { motion } from "framer-motion"
 import { Link as ScrollLink } from 'react-scroll';
-
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaDiscord } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
-
-import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
-
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
-} from "@/components/icons";
-import { useState } from "react";
+;import { siteConfig } from "@/config/site";
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
 import ContactIcon from "@/shared/icons/icons";

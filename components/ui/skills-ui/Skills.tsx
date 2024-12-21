@@ -5,6 +5,7 @@ import React from 'react';
 import {Tabs, Tab, } from "@nextui-org/react";
 import { FaReact, FaNodeJs, FaGitAlt, FaDatabase, FaCss3, FaHtml5, FaJs, FaCss3Alt } from 'react-icons/fa';
 import { SiMongodb,SiNextdotjs , SiRedux,SiTypescript,SiMongoosedotws, SiPrisma} from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 
 
 const skills = {
@@ -33,7 +34,7 @@ const skills = {
     ],
     tools: [
         { skill: 'Git', level: 95, icon: <FaGitAlt size={30} /> },
-        { skill: 'Docker', level: 70, icon: <FaGitAlt size={30} /> },
+        { skill: 'VsCode', level: 70, icon: <VscVscode size={30} /> },
     ],
 };
 
