@@ -8,7 +8,7 @@ import Journey from '@/components/ui/about-ui/Journey';
 
 const About = () => {
     return (
-        <div className=''>
+        <div className='lg:ml-[190px]'>
             <Journey/>
         </div>
     );

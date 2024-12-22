@@ -15,6 +15,7 @@ import { Navbar } from "@/components/navbar";
 import SmoothScroller from "@/components/ui/scroll/Scrool";
 
 import { ReactNode } from "react";
+import Footer from "@/shared/Footer/Footer";
 
 interface RootLayout {
   children: ReactNode;
@@ -75,6 +76,9 @@ export default function RootLayout({ children, about, skills, projects, blogs, e
             </div>
             <div id="contact">
               {contact}
+            </div>
+            <div>
+              <Footer />
             </div>
           </div>
         </Providers>

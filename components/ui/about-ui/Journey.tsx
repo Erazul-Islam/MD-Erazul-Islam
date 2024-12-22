@@ -15,8 +15,7 @@ const Journey = () => {
   }, []);
 
   const milestones = [
-    { year: "June 2023", event: "Started my first job as a Junior Developer", description: "I embarked on my journey to become a full-stack developer in June 2023. Motivated by a deep interest in technology and problem-solving, I started with web development and progressively built a strong foundation in front-end and back-end technologies" },
-    { year: " 2023", event: "Started my first job as a Junior Developer", description: "I embarked on my journey to become a full-stack developer in June 2023. Motivated by a deep interest in technology and problem-solving, I started with web development and progressively built a strong foundation in front-end and back-end technologies" },
+    { year: "June 2023", event: "Started to Create my first project", description: "I embarked on my journey to become a full-stack developer in June 2023. Motivated by a deep interest in technology and problem-solving, I started with web development and progressively built a strong foundation in front-end and back-end technologies" }
   ];
 
   return (
@@ -29,7 +28,6 @@ const Journey = () => {
       >
         My Career Journey
       </motion.h1>
-
       <div className="space-y-20">
         {milestones.map((milestone, index) => (
           <motion.div
@@ -47,7 +45,7 @@ const Journey = () => {
               <span className="text-xl font-serif">{milestone.year}</span>
             </motion.div>
 
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 mt-4">
               <motion.h3
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -68,6 +66,8 @@ const Journey = () => {
           </motion.div>
         ))}
       </div>
+     
+
     </div>
   );
 };
