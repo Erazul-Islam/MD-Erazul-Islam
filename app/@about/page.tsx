@@ -8,7 +8,7 @@ import Journey from '@/components/ui/about-ui/Journey';
 
 const About = () => {
     return (
-        <div>
+        <div className=''>
             <Journey/>
         </div>
     );

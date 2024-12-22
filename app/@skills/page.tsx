@@ -2,8 +2,9 @@
 
 "use client"
 
-import SkillSet from '@/components/ui/skills-ui/Skills';
 import React from 'react';
+
+import SkillSet from '@/components/ui/skills-ui/Skills';
 
 const Skills = () => {
     return (

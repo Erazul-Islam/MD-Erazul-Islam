@@ -2,8 +2,9 @@
 
 "use client"
 
-import Card3D from '@/components/ui/project-ui/Projects';
 import React from 'react';
+
+import Card3D from '@/components/ui/project-ui/Projects';
 
 const Projects = () => {
     return (
