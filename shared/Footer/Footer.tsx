@@ -25,7 +25,7 @@ export default function Footer() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <h3 className="text-lg font-semibold text-white">About Me</h3>
+                        <h3 className="text-lg sm:text-center font-semibold text-white">About Me</h3>
                         <p className="text-sm">
                             I am a passionate developer focused on creating impactful <br />
                             digital solutions. Let’s connect and bring your ideas to life!
@@ -39,25 +39,30 @@ export default function Footer() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <h3 className="text-lg font-semibold text-white">Quick Links</h3>
-                        <ul className="space-y-2">
-                            <li>
-                                <a href="#about" className="hover:text-blue-400">
+                        <h3 className="text-lg font-semibold sm:mt-4 sm:text-center text-white">Quick Links</h3>
+                        <ul className="space-y-2 sm:flex justify-between ">
+                            <li className="mt-4">
+                                <a href="#home" >
+                                    Home
+                                </a>
+                            </li>
+                            <li className="">
+                                <a href="#about" >
                                     About
                                 </a>
                             </li>
                             <li>
-                                <a href="#projects" className="hover:text-blue-400">
+                                <a href="#projects" >
                                     Projects
                                 </a>
                             </li>
                             <li>
-                                <a href="#blogs" className="hover:text-blue-400">
+                                <a href="#blogs" >
                                     Blogs
                                 </a>
                             </li>
                             <li>
-                                <a href="#contact" className="hover:text-blue-400">
+                                <a href="#contact" >
                                     Contact
                                 </a>
                             </li>
@@ -71,7 +76,7 @@ export default function Footer() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <h3 className="text-lg font-semibold text-white">Get in Touch</h3>
+                        <h3 className="text-lg font-semibold sm:text-center text-white">Get in Touch</h3>
                         <ul className="space-y-2">
                             <li className="mt-4">
                                 <a
