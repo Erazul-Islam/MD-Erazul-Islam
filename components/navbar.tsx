@@ -18,6 +18,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
 import ContactIcon from "@/shared/icons/icons";
+import { ThemeSwitch } from "./theme-switch";
 
 
 export const Navbar = () => {
@@ -87,6 +88,9 @@ export const Navbar = () => {
       </NavbarContent>
       <NavbarContent justify="center">
         <ContactIcon/>
+      </NavbarContent>
+      <NavbarContent justify="center">
+        <ThemeSwitch/>
       </NavbarContent>
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
         <NavbarMenuToggle />
