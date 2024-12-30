@@ -23,20 +23,32 @@ const Journey = () => {
     },
     {
       date: 'July 2023',
-      title: 'Completed My First Frontend Project',
+      title: 'Started to learn javaScript and React',
       description:
-        'In July 2023, I completed my first frontend project. It was a challenging but rewarding experience that enhanced my skills in React, CSS, and JavaScript.',
+        'Venturing into JavaScript opened the door to dynamic and interactive web development. Building upon this, I delved into React, where I learned to create reusable components, manage state efficiently, and develop powerful, user-centric web applications with ease and flexibility.',
     },
     {
-      date: 'August 2023',
+      date: 'October 2023',
       title: 'Explored Backend Development',
       description:
-        'By August 2023, I ventured into backend development, working with Node.js, Express, and MongoDB to build RESTful APIs and manage databases efficiently.',
+        'I ventured into backend development, working with Node.js, Express, and MongoDB to build RESTful APIs and manage databases efficiently.',
+    },
+    {
+      date: 'January 2024',
+      title: 'Motivated to be MERN stack developer',
+      description:
+        'Driven by a passion for full-stack development, I set my sights on mastering the MERN stack—MongoDB, Express, React, and Node.js. This journey fuels my desire to build dynamic, scalable, and efficient web applications, bridging the gap between seamless front-end interfaces and robust back-end architectures.',
+    },
+    {
+      date: 'Middle of 2024',
+      title: 'Explored NEXT JS, REDUX and Backend development',
+      description:
+        'Taking my development skills further, I dived into Next.js for server-side rendering and seamless routing, mastered Redux for efficient state management, and ventured into backend development with Prisma and PostgreSQL. This exploration equipped me with the tools to build robust, scalable, and full-stack applications with ease.',
     },
   ];
 
   return (
-    <div className="container mx-auto p-8 md:p-16 ">
+    <div className="container mx-auto p-8 ">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -58,7 +70,7 @@ const Journey = () => {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
-              className="border border-pink-800 text-white p-6 rounded-md shadow-lg flex items-center justify-center w-20 h-20"
+              className="text-pink-800 p-6 rounded-md shadow-lg flex items-center justify-center w-20 h-20"
             >
               <span className="text-xl font-serif">{journey.date}</span>
             </motion.div>
