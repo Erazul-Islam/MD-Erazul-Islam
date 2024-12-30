@@ -15,7 +15,7 @@ const Card3D = () => {
     const projects = [
         {
             name: "Pet Care",
-            image: "https://i.ibb.co.com/BNWYps3/home-hero-01-1.jpg",
+            image: "https://res.cloudinary.com/djs5y6ey5/image/upload/v1735572568/web_kn1l96.jpg",
             liveLink: "https://petcareclient-phi.vercel.app/",
             backendRepo: "https://github.com/Erazul-Islam/pet-and-care-backend",
             clientRepo: "https://github.com/Erazul-Islam/Pet-Care-FrontEnd",
@@ -23,7 +23,7 @@ const Card3D = () => {
         },
         {
             name: "Auto Bike",
-            image: "https://i.ibb.co.com/MCzFvBC/web-donut-e-Sz-WOpp1rgw-unsplash.jpg",
+            image: "https://res.cloudinary.com/djs5y6ey5/image/upload/v1735572974/Screenshot_297_ylnht4.png",
             liveLink: "https://auto-bike-two.vercel.app",
             clientRepo: "https://github.com/Erazul-Islam/Bike-Rental-Service-FrontEnd",
             backendRepo: "https://github.com/Erazul-Islam/bike-rental-service",
@@ -31,7 +31,7 @@ const Card3D = () => {
         },
         {
             name: "Japanese Learning",
-            image: "https://i.ibb.co.com/q5svZgw/DALL-E-2024-12-12-18-16-58-An-aesthetic-logo-design-for-a-Japanese-language-learning-website-The-log.webp",
+            image: "https://res.cloudinary.com/djs5y6ey5/image/upload/v1735573466/learn-japanese-mountain-and-sun-symbols-indicating-japan-language-HJG0KE_jgaztl.jpg",
             liveLink: "https://japanese-language.vercel.app/",
             clientRepo: "https://github.com/Erazul-Islam/Japanese-Vocabulary-learning-Application-Client",
             backendRepo: "https://github.com/Erazul-Islam/Japanese-Vocabulary-learning-Application-Backend",
