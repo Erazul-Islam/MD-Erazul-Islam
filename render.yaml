@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: my-nextjs-app
+    env: node
+    plan: free
+    buildCommand: "npm install && npm run build"
+    startCommand: "next start -p 3000"  
+    autoDeploy: true
+    region: oregon
