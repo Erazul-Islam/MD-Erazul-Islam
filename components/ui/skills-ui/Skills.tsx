@@ -2,15 +2,15 @@
 /* eslint-disable react/jsx-sort-props */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {Tabs, Tab, } from "@nextui-org/react";
+import { Tabs, Tab, } from "@nextui-org/react";
 import { FaReact, FaNodeJs, FaGitAlt, FaDatabase, FaCss3, FaHtml5, FaJs, FaCss3Alt } from 'react-icons/fa';
-import { SiMongodb,SiNextdotjs , SiRedux,SiTypescript,SiMongoosedotws, SiPrisma} from "react-icons/si";
+import { SiMongodb, SiNextdotjs, SiRedux, SiTypescript, SiMongoosedotws, SiPrisma } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
 
 const skills = {
     frontend: [
-       
+
         { skill: 'HTML', level: 95, icon: <FaHtml5 size={30} /> },
         { skill: 'CSS', level: 85, icon: <FaCss3 size={30} /> },
         { skill: 'Tailwind', level: 85, icon: <FaCss3Alt size={30} /> },
@@ -31,26 +31,23 @@ const skills = {
     languages: [
         { skill: 'JavaScript', level: 90, icon: <FaJs size={30} /> },
         { skill: 'TypeScript', level: 80, icon: <SiTypescript size={30} /> },
-    ],
-    tools: [
-        { skill: 'Git', level: 95, icon: <FaGitAlt size={30} /> },
-        { skill: 'VsCode', level: 70, icon: <VscVscode size={30} /> },
-    ],
+    ]
 };
 
 export default function SkillSet() {
     return (
         <section id="skills" className="py-8 text-white">
             <div className="container mx-auto text-center">
-                <Tabs aria-label="Skill Categories" variant="bordered"  color="danger">
+                <Tabs aria-label="Skill Categories" variant="bordered" color="danger">
                     <Tab key="frontend" title="Frontend">
-                        <div className="mt-8 flex items-center gap-4 justify-center ">
+                        <div className="mt-8 flex items-center gap-4 justify-center">
                             {skills.frontend.map((skill, index) => (
-                                <div key={index} className="flex items-center p-2 gap-2 justify-center border ">
-                                    <div className="text-pink-700 ">{skill.icon}</div>
-                                    <div className="flex flex-col w-full">
-                                        <h3 className="text-xl font-serif text-left">{skill.skill}</h3>
-                                    </div>
+                                <div
+                                    key={index}
+                                    className=" flex items-center p-2 gap-2 justify-center border"
+                                >
+                                    <div className="text-pink-700">{skill.icon}</div>
+                                    <h3 className="text-xl font-serif mt-2">{skill.skill}</h3>
                                 </div>
                             ))}
                         </div>
@@ -95,7 +92,7 @@ export default function SkillSet() {
                         </div>
                     </Tab>
 
-                    <Tab key="tools" title="Tools">
+                    {/* <Tab key="tools" title="Tools">
                         <div className="mt-8 flex items-center gap-4 justify-center">
                             {skills.tools.map((skill, index) => (
                                 <div key={index} className="flex items-center p-2 gap-2 justify-center border">
@@ -106,7 +103,7 @@ export default function SkillSet() {
                                 </div>
                             ))}
                         </div>
-                    </Tab>
+                    </Tab> */}
                 </Tabs>
             </div>
         </section>

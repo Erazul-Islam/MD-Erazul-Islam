@@ -58,10 +58,10 @@ export const Navbar = () => {
             <NavbarItem key={item.href}>
               <motion.div
                 animate="animate"
+                className="relative"
                 initial="initial"
                 variants={linkVariants}
                 whileHover="whileHover"
-                className="relative"
               >
                 <ScrollLink
                   className={clsx(
