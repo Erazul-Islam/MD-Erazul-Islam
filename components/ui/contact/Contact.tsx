@@ -34,6 +34,21 @@ const ContactComponent = () => {
     const [success, setSuccess] = useState<boolean>(false)
     const isInView = useInView(ref, { margin: "-100px" })
 
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
+
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -70,7 +85,7 @@ const ContactComponent = () => {
             </motion.div>
             <div className="flex-1 relative">
                 <motion.div className=" z-0 stroke-orange-400 absolute m-auto" initial={{ opacity: 1 }} whileInView={{ opacity: 0 }} transition={{ delay: 3, duration: 1 }} >
-                    <svg className="w-full ml-12 mt-12 lg:mt-24 lg:ml-24 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-[450px] lg:max-h-[450px] xl:max-w-2xl"   viewBox="0 0 32.666 32.666">
+                    <svg className="w-full ml-12 mt-12 lg:mt-24 lg:ml-24 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-[450px] lg:max-h-[450px] xl:max-w-2xl" viewBox="0 0 32.666 32.666">
                         <motion.path
                             strokeWidth={0.2}
                             fill="none"
@@ -94,9 +109,9 @@ const ContactComponent = () => {
                     </svg>
                 </motion.div>
                 <motion.form onSubmit={sendEmail} ref={formRef} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 3, duration: 1 }} className="flex px-8 flex-col mt-6 lg:mt-12 gap-5">
-                    <input className="rounded-md p-4 bg-transparent border border-pink-800 text-white" type="text"   placeholder="Name" name="name" />
-                    <input className="rounded-md p-4 bg-transparent border border-pink-800 text-white" type="email" required placeholder="Email" name="email" />
-                    <textarea className="rounded-md p-4 bg-transparent border-pink-800 text-white border" placeholder="Message" name="message" rows={8} />
+                    <input className="rounded-md p-4 bg-transparent border border-pink-800 text-white" type="text" placeholder="Name" onChange={handleInputChange} value={formData.name} name="name" />
+                    <input className="rounded-md p-4 bg-transparent border border-pink-800 text-white" type="email" required onChange={handleInputChange} value={formData.email} placeholder="Email" name="email" />
+                    <textarea className="rounded-md p-4 bg-transparent border-pink-800 text-white border" placeholder="Message" value={formData.message} onChange={handleInputChange} name="message" rows={8} />
                     <button className="border rounded-md border-pink-800 p-4 bg-none cursor-pointer">Submit</button>
                     {error && "error"}
                     {success && "Wow, Success"}
