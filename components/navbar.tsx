@@ -89,9 +89,6 @@ export const Navbar = () => {
       <NavbarContent justify="center">
         <ContactIcon/>
       </NavbarContent>
-      <NavbarContent justify="center">
-        <ThemeSwitch/>
-      </NavbarContent>
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
         <NavbarMenuToggle />
       </NavbarContent>

@@ -23,7 +23,7 @@ const Cursor = () => {
     }, [])
 
     return (
-        <motion.div animate={{ x: position.x + 10, y: position.y + 10 }} className="w-12 h-12 z-[999] sm:hidden lg:fixed rounded-full border-[2px] border-solid border-white">
+        <motion.div animate={{ x: position.x + 10, y: position.y + 10 }} className="w-12 h-12 z-[999] fixed rounded-full border-[2px] border-solid border-white">
 
         </motion.div>
     );

@@ -31,9 +31,9 @@ export default function ReadingBlog() {
     
 
     return (
-        <div className=" lg:ml-[230px] gap-4 ml-12 grid mt-4 lg:mr-[140px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className=" lg:ml-[230px] ml-24 gap-4 grid mt-4 lg:mr-[140px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {
-                blogs.map((one) => (<Card key={one.id} isFooterBlurred className="w-[350px] h-[350px] ">
+                blogs.map((one) => (<Card key={one.id} isFooterBlurred className="md:w-[350px] w-[250px] md:h-[350px] ">
                     <Image
                         removeWrapper
                         alt="Card example background"
