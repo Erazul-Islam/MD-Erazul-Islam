@@ -108,14 +108,55 @@ const ContactComponent = () => {
                         />
                     </svg>
                 </motion.div>
-                <motion.form onSubmit={sendEmail} ref={formRef} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 3, duration: 1 }} className="flex px-8 flex-col mt-6 lg:mt-12 gap-5">
-                    <input className="rounded-md p-4 bg-transparent border border-pink-800 text-white" type="text" placeholder="Name" onChange={handleInputChange} value={formData.name} name="name" />
-                    <input className="rounded-md p-4 bg-transparent border border-pink-800 text-white" type="email" required onChange={handleInputChange} value={formData.email} placeholder="Email" name="email" />
-                    <textarea className="rounded-md p-4 bg-transparent border-pink-800 text-white border" placeholder="Message" value={formData.message} onChange={handleInputChange} name="message" rows={8} />
-                    <button className="border rounded-md border-pink-800 p-4 bg-none cursor-pointer">Submit</button>
-                    {error && "error"}
-                    {success && "Wow, Success"}
+                <motion.form
+                    onSubmit={sendEmail}
+                    ref={formRef}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 3, duration: 1 }}
+                    className="flex px-8 flex-col mt-6 lg:mt-12 gap-5"
+                >
+                    {/* Name Input */}
+                    <input
+                        className="rounded-md p-4 bg-black border border-pink-800 text-white focus:outline-none focus:ring-2 focus:ring-pink-500 w-full"
+                        type="text"
+                        placeholder="Name"
+                        onChange={handleInputChange}
+                        value={formData.name}
+                        name="name"
+                    />
+
+                    {/* Email Input */}
+                    <input
+                        className="rounded-md p-4 bg-black border border-pink-800 text-white focus:outline-none focus:ring-2 focus:ring-pink-500 w-full"
+                        type="email"
+                        required
+                        onChange={handleInputChange}
+                        value={formData.email}
+                        placeholder="Email"
+                        name="email"
+                    />
+
+                    {/* Message Textarea */}
+                    <textarea
+                        className="rounded-md p-4 bg-black border-pink-800 text-white border focus:outline-none focus:ring-2 focus:ring-pink-500 w-full"
+                        placeholder="Message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        name="message"
+                        rows={8}
+                    />
+
+                    {/* Submit Button */}
+                    <button className="border rounded-md border-pink-800 p-4 bg-black text-white hover:bg-pink-800 cursor-pointer">
+                        Submit
+                    </button>
+
+                    {/* Error/Success Messages */}
+                    {error && <span className="text-red-500 mt-2">Error occurred!</span>}
+                    {success && <span className="text-green-500 mt-2">Wow, Success!</span>}
                 </motion.form>
+
             </div>
         </motion.div>
     );
