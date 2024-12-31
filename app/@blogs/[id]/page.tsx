@@ -2,13 +2,29 @@
 
 "use client"
 
-import { useParams } from 'next/navigation';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const BlogDetails = () => {
+    
+    const [data,setData] = useState([])
 
-    const {id} = useParams()
-    console.log(id)
+    useEffect(() => {
+        const fetchBlogs = async () => {
+            try{
+                const res = await fetch("/public/blog.json")
+                const data = await res.json()
+
+                setData(data)
+            }
+            catch (err) {
+
+            }
+        }
+
+        fetchBlogs()
+    },[])
+
+    console.log(data)
 
     return (
         <div>
