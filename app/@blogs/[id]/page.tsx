@@ -24,8 +24,6 @@ const BlogDetails = () => {
         fetchBlogs()
     },[])
 
-    console.log(data)
-
     return (
         <div>
             Blog

@@ -1,5 +1,5 @@
-{
-    "blogs": [
+
+     [
       {
         "id": "1",
         "name": "AI Interview",
@@ -22,5 +22,5 @@
         "description": "React js , the javaScript library,.."
       }
     ]
-  }
+
   
