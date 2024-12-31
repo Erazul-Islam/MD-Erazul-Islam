@@ -45,11 +45,6 @@ export default function ReadingBlog() {
                             <p className="text-black text-center font-serif text-xl">{one.name}</p>
                             <p className="text-black text-tiny">{one.description}</p>
                         </div>
-                        <Link href={one.link}>
-                            <Button className="text-tiny" color="danger" radius="md" size="sm">
-                                    Linkedin
-                            </Button>
-                        </Link>
                         <Link href={one.id}>
                             <Button className="text-tiny" color="danger" radius="md" size="sm">
                                     Read 
