@@ -48,7 +48,7 @@ const Card3D = () => {
     ];
 
     return (
-        <div className="relative flex justify-center items-center overflow-hidden pl-8 pr-8">
+        <div className="relative flex justify-center items-center overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-auto lg:ml-[230px] lg:mr-[65px] w-full">
                 {projects.map((project, index) => {
                     const [isFlipped, setIsFlipped] = useState(false);

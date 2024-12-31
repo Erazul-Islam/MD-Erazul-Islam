@@ -65,7 +65,7 @@ export default function RootLayout({ children, about, skills, projects, blogs, e
             <div id="skills">
               {skills}
             </div>
-            <div id="projects">
+            <div className="mx-auto" id="projects">
               {projects}
             </div>
             <div className="md:mr-48" id="about">
