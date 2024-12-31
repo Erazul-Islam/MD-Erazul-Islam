@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable padding-line-between-statements */
 /* eslint-disable prettier/prettier */
@@ -22,7 +23,7 @@ const Cursor = () => {
     }, [])
 
     return (
-        <motion.div animate={{ x: position.x + 10, y: position.y + 10 }} className="w-12 h-12 z-[999] lg:fixed rounded-full border-[2px] border-solid border-white bor">
+        <motion.div animate={{ x: position.x + 10, y: position.y + 10 }} className="w-12 h-12 z-[999] sm:hidden lg:fixed rounded-full border-[2px] border-solid border-white">
 
         </motion.div>
     );

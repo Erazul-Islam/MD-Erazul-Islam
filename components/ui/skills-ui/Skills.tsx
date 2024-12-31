@@ -40,7 +40,7 @@ export default function SkillSet() {
             <div className="container mx-auto text-center">
                 <Tabs aria-label="Skill Categories" variant="bordered" color="danger">
                     <Tab key="frontend" title="Frontend">
-                        <div className="mt-8 flex items-center gap-4 justify-center">
+                        <div className="mt-8 flex flex-wrap items-center gap-4 justify-center">
                             {skills.frontend.map((skill, index) => (
                                 <div
                                     key={index}
@@ -52,9 +52,8 @@ export default function SkillSet() {
                             ))}
                         </div>
                     </Tab>
-
                     <Tab key="backend" title="Backend">
-                        <div className="mt-8 flex items-center gap-4 justify-center">
+                        <div className="mt-8 flex flex-wrap items-center gap-4 justify-center">
                             {skills.backend.map((skill, index) => (
                                 <div key={index} className="flex items-center p-2 gap-2 justify-center border">
                                     <div className="text-pink-700">{skill.icon}</div>
@@ -65,7 +64,6 @@ export default function SkillSet() {
                             ))}
                         </div>
                     </Tab>
-
                     <Tab key="database" title="Database">
                         <div className="mt-8 flex items-center gap-4 justify-center">
                             {skills.database.map((skill, index) => (
@@ -78,7 +76,6 @@ export default function SkillSet() {
                             ))}
                         </div>
                     </Tab>
-
                     <Tab key="languages" title="Languages">
                         <div className="mt-8 flex items-center gap-4 justify-center">
                             {skills.languages.map((skill, index) => (
