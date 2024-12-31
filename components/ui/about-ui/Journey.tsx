@@ -48,23 +48,23 @@ const Journey = () => {
   ];
 
   return (
-    <div className="container mx-auto p-8 ">
+    <div className="container mx-auto px-6 sm:px-6 my-6">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="text-4xl font-extrabold text-center text-white mb-12"
+        className="text-4xl font-extrabold text-center text-white mb-6 mt-6"
       >
         My Career Journey
       </motion.h1>
-      <div className="space-y-20">
+      <div className="space-y-4">
         {journeys.map((journey, index) => (
           <motion.div
             key={index}
             data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
             className={`flex flex-col ${
               index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-            } items-center gap-10`}
+            } items-center gap-6 md:gap-10`}
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
@@ -75,7 +75,7 @@ const Journey = () => {
               <span className="text-xl font-serif">{journey.date}</span>
             </motion.div>
 
-            <div className="md:w-1/2 mt-4">
+            <div className="md:w-1/2">
               <motion.h3
                 initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
                 animate={{ opacity: 1, x: 0 }}
