@@ -52,7 +52,7 @@ const ContactComponent = () => {
     };
 
     return (
-        <motion.div ref={ref} variants={variants} initial="initial" animate="animate" className="h-full lg:ml-[230px] lg:mr-48 max-w-full m-auto md:flex items-center gap-12">
+        <motion.div ref={ref} variants={variants} initial="initial" animate="animate" className="h-full lg:ml-[230px] lg:mr-48 max-w-full  md:flex items-center gap-12">
             <motion.div variants={variants} className="flex-1 flex flex-col gap-10">
                 <motion.h1 variants={variants} className="md:text-8xl font-serif text-center lg:text-left md:leading-[100px]">Let's work together</motion.h1>
                 <motion.div className="text-center lg:text-left" variants={variants}>
@@ -93,7 +93,7 @@ const ContactComponent = () => {
                         />
                     </svg>
                 </motion.div>
-                <motion.form onSubmit={sendEmail} ref={formRef} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 3, duration: 1 }} className="flex flex-col m-4 lg:mt-12 gap-5">
+                <motion.form onSubmit={sendEmail} ref={formRef} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 3, duration: 1 }} className="flex px-8 flex-col mt-6 lg:mt-12 gap-5">
                     <input className="rounded-md p-4 bg-transparent border border-pink-800 text-white" type="text"   placeholder="Name" name="name" />
                     <input className="rounded-md p-4 bg-transparent border border-pink-800 text-white" type="email" required placeholder="Email" name="email" />
                     <textarea className="rounded-md p-4 bg-transparent border-pink-800 text-white border" placeholder="Message" name="message" rows={8} />

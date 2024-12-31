@@ -12,7 +12,7 @@ export default function Footer() {
         <footer className=" text-gray-300 font-serif lg:mt-12 py-10">
             <div className="lg:ml-[240px]">
                 <motion.div
-                    className="container  px-4 grid grid-cols-1 lg:grid-cols-3 gap-"
+                    className="container  px-6 grid grid-cols-1 lg:grid-cols-3 gap-"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}

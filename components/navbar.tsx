@@ -18,7 +18,6 @@ import { Link as ScrollLink } from 'react-scroll';
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
 import ContactIcon from "@/shared/icons/icons";
-import { ThemeSwitch } from "./theme-switch";
 
 
 export const Navbar = () => {
