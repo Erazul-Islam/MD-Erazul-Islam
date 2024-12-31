@@ -37,11 +37,19 @@ const Card3D = () => {
             backendRepo: "https://github.com/Erazul-Islam/Japanese-Vocabulary-learning-Application-Backend",
             details: "An interactive language-learning platform designed to help users master Japanese vocabulary through personalized and engaging tools.",
         },
+        {
+            name: "Chat Verse",
+            image: "https://res.cloudinary.com/djs5y6ey5/image/upload/v1735645657/approved-chat-app-icon-vector-28873697_rvqsge.jpg",
+            liveLink: "https://the-messenger-client.onrender.com",
+            clientRepo: "https://github.com/Erazul-Islam/The-Messenger-Client",
+            backendRepo: "https://github.com/Erazul-Islam/The-Messenger",
+            details: "This is a real time chat application where user can chat with a predefined group. Join the group and sent messages with each other",
+        },
     ];
 
     return (
         <div className="relative flex justify-center items-center overflow-hidden pl-8 pr-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ml-[40px] lg:ml-[230px] lg:mr-[65px] w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ml-auto lg:ml-[230px] lg:mr-[65px] w-full">
                 {projects.map((project, index) => {
                     const [isFlipped, setIsFlipped] = useState(false);
 

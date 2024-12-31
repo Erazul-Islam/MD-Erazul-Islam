@@ -3,9 +3,8 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { Tabs, Tab, } from "@nextui-org/react";
-import { FaReact, FaNodeJs, FaGitAlt, FaDatabase, FaCss3, FaHtml5, FaJs, FaCss3Alt } from 'react-icons/fa';
-import { SiMongodb, SiNextdotjs, SiRedux, SiTypescript, SiMongoosedotws, SiPrisma } from "react-icons/si";
-import { VscVscode } from "react-icons/vsc";
+import { FaReact, FaNodeJs, FaDatabase, FaCss3, FaHtml5, FaJs, FaCss3Alt } from 'react-icons/fa';
+import { SiMongodb, SiNextdotjs, SiRedux, SiTypescript, SiMongoosedotws, SiPrisma, SiSocketdotio } from "react-icons/si";
 
 
 const skills = {
@@ -17,6 +16,7 @@ const skills = {
         { skill: 'React', level: 90, icon: <FaReact size={30} /> },
         { skill: 'Next js', level: 90, icon: <SiNextdotjs size={30} /> },
         { skill: 'Redux', level: 90, icon: <SiRedux size={30} /> },
+        { skill: 'Socket io', level: 90, icon: <SiSocketdotio size={30} /> },
     ],
     backend: [
         { skill: 'Node.js', level: 80, icon: <FaNodeJs size={30} /> },

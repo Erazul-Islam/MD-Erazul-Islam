@@ -70,7 +70,7 @@ const ContactComponent = () => {
             </motion.div>
             <div className="flex-1 relative">
                 <motion.div className=" z-0 stroke-orange-400 absolute m-auto" initial={{ opacity: 1 }} whileInView={{ opacity: 0 }} transition={{ delay: 3, duration: 1 }} >
-                    <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
+                    <svg className="w-full h-auto max-w-xs sm:max-w-md md:max-w-lg lg:max-w-[450px] lg:max-h-[450px] xl:max-w-2xl"   viewBox="0 0 32.666 32.666">
                         <motion.path
                             strokeWidth={0.2}
                             fill="none"
