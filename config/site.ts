@@ -17,6 +17,10 @@ export const siteConfig = {
       href: "#skills",
     },
     {
+      label: "Experience",
+      href: "#experience",
+    },
+    {
       label: "Projects",
       href: "#project",
     },

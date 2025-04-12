@@ -88,19 +88,6 @@ export default function SkillSet() {
                             ))}
                         </div>
                     </Tab>
-
-                    {/* <Tab key="tools" title="Tools">
-                        <div className="mt-8 flex items-center gap-4 justify-center">
-                            {skills.tools.map((skill, index) => (
-                                <div key={index} className="flex items-center p-2 gap-2 justify-center border">
-                                    <div className="text-pink-700">{skill.icon}</div>
-                                    <div className="flex flex-col w-full">
-                                        <h3 className="text-xl font-serif  text-left">{skill.skill}</h3>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </Tab> */}
                 </Tabs>
             </div>
         </section>

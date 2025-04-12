@@ -25,6 +25,7 @@ interface RootLayout {
   projects: ReactNode;
   blogs: ReactNode;
   contact: ReactNode;
+  experience : ReactNode
 }
 
 export const metadata: Metadata = {
@@ -45,7 +46,7 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({ children, about, skills, projects, blogs, education, contact }: RootLayout) {
+export default function RootLayout({ children, about, skills, projects, blogs, education,experience, contact }: RootLayout) {
   return (
     <html suppressHydrationWarning lang="en">
       <head />
@@ -65,10 +66,13 @@ export default function RootLayout({ children, about, skills, projects, blogs, e
             <div id="skills">
               {skills}
             </div>
+            <div id="experience">
+                {experience}
+            </div>
             <div className="mx-auto" id="projects">
               {projects}
             </div>
-            <div className="md:mr-48" id="about">
+            <div className="mx-auto" id="about">
               {about}
             </div>
             <div id="blogs">
