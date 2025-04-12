@@ -46,7 +46,7 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({ children, about, skills, projects, blogs, education,experience, contact }: RootLayout) {
+export default function RootLayout({ children, about, skills, projects, blogs,experience, contact }: RootLayout) {
   return (
     <html suppressHydrationWarning lang="en">
       <head />

@@ -10,6 +10,7 @@
 	},
 	"dependencies": {
 		"@emailjs/browser": "^4.4.1",
+		"@heroicons/react": "^2.2.0",
 		"@nextui-org/button": "2.2.3",
 		"@nextui-org/code": "2.2.3",
 		"@nextui-org/input": "2.4.3",

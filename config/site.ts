@@ -29,10 +29,6 @@ export const siteConfig = {
       href: "#blog",
     },
     {
-      label: "Education",
-      href: "#education",
-    },
-    {
       label: "Contact",
       href: "#contact",
     },
