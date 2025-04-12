@@ -32,11 +32,11 @@ const ExperienceCard = () => {
 
   return (
     <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      variants={cardVariants}
       className="max-w-4xl mx-auto font-serif rounded-xl border border-pink-700 overflow-hidden hover:border-pink-400 transition-colors duration-300"
+      initial="hidden"
+      variants={cardVariants}
+      viewport={{ once: true }}
+      whileInView="visible"
     >
       {/* Glowing header */}
       <div className="relative p-6 bg-gradient-to-r from-red-600 to-red-800">
@@ -87,9 +87,9 @@ const ExperienceCard = () => {
           ].map((item, index) => (
             <motion.div
               key={index}
+              className="flex items-start gap-3 p-4 rounded-lg border border-pink-700 cursor-default"
               variants={hoverItem}
               whileHover="hover"
-              className="flex items-start gap-3 p-4 rounded-lg border border-pink-700 cursor-default"
             >
               {item.icon}
               <p className="text-gray-300">{item.text}</p>
@@ -104,9 +104,9 @@ const ExperienceCard = () => {
             {["Next.js", "Tailwind CSS", "shadcn/ui", "Prisma" , "mongodb" ,"GitHub"].map((tech) => (
               <motion.span
                 key={tech}
+                className="px-3 py-1 bg-pink-900/50 text-pink-300 rounded-full text-sm border border-pink-800"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-3 py-1 bg-pink-900/50 text-pink-300 rounded-full text-sm border border-pink-800"
               >
                 {tech}
               </motion.span>

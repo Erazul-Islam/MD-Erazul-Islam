@@ -12,9 +12,7 @@ export function TextRevealCardPreview() {
             <TextRevealCard
                 text="You know the business"
                 revealText="I know the chemistry "
-            >
-                
-            </TextRevealCard>
+             />
         </div>
     );
 }
