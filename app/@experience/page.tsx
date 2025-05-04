@@ -6,7 +6,6 @@ import ExperienceCard from "@/components/ui/experience-ui/experience";
 
 const ExperiencePage = () => {
   return (
-
       <div className=" px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h1 className="font-serif text-4xl text-pink-800 text-center">
