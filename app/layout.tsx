@@ -52,7 +52,7 @@ export default function RootLayout({ children, about, skills, projects, blogs,ex
       <head />
       <body
         className={clsx(
-          "min-h-screen font-sans antialiased",
+          "min-h-screen font-sans overflow-x-hidden antialiased",
           fontSans.variable,
         )}
       >
@@ -72,9 +72,9 @@ export default function RootLayout({ children, about, skills, projects, blogs,ex
             <div className="mx-auto" id="projects">
               {projects}
             </div>
-            <div className="mx-auto" id="about">
+            {/* <div className="mx-auto" id="about">
               {about}
-            </div>
+            </div> */}
             <div id="blogs">
               {blogs}
             </div>
