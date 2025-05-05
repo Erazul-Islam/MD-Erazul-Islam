@@ -1,11 +1,7 @@
-/* eslint-disable import/order */
-/* eslint-disable prettier/prettier */
-
-
-
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
+import { ReactNode } from "react";
 
 import { Providers } from "./providers";
 
@@ -13,8 +9,6 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import SmoothScroller from "@/components/ui/scroll/Scrool";
-
-import { ReactNode } from "react";
 import Footer from "@/shared/Footer/Footer";
 
 interface RootLayout {
@@ -25,7 +19,7 @@ interface RootLayout {
   projects: ReactNode;
   blogs: ReactNode;
   contact: ReactNode;
-  experience : ReactNode
+  experience: ReactNode;
 }
 
 export const metadata: Metadata = {
@@ -46,7 +40,15 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({ children, about, skills, projects, blogs,experience, contact }: RootLayout) {
+export default function RootLayout({
+  children,
+  about,
+  skills,
+  projects,
+  blogs,
+  experience,
+  contact,
+}: RootLayout) {
   return (
     <html suppressHydrationWarning lang="en">
       <head />
@@ -60,27 +62,14 @@ export default function RootLayout({ children, about, skills, projects, blogs,ex
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <SmoothScroller />
-            <div id="home">
-              {children}
-            </div>
-            <div id="skills">
-              {skills}
-            </div>
-            <div id="experience">
-                {experience}
-            </div>
+            <div id="home">{children}</div>
+            <div id="skills">{skills}</div>
+            <div id="experience">{experience}</div>
             <div className="mx-auto" id="projects">
               {projects}
             </div>
-            {/* <div className="mx-auto" id="about">
-              {about}
-            </div> */}
-            <div id="blogs">
-              {blogs}
-            </div>
-            <div id="contact">
-              {contact}
-            </div>
+            <div id="blogs">{blogs}</div>
+            <div id="contact">{contact}</div>
             <div>
               <Footer />
             </div>

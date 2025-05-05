@@ -4,7 +4,6 @@ import {
   Navbar as NextUINavbar,
   NavbarContent,
   NavbarMenu,
-  NavbarMenuToggle,
   NavbarItem,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
@@ -13,15 +12,22 @@ import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
+import { FiMenu } from "react-icons/fi";
+import { useState } from "react";
 
 import { siteConfig } from "@/config/site";
 import ContactIcon from "@/shared/icons/icons";
 
 export const Navbar = () => {
   const router = useRouter();
-
   const handleLinkClick = () => {
     router.push("/");
+  };
+
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
   };
 
   const underlineVariants = {
@@ -82,8 +88,12 @@ export const Navbar = () => {
       <NavbarContent justify="center">
         <ContactIcon />
       </NavbarContent>
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <NavbarMenuToggle />
+      <NavbarContent
+        className="sm:hidden basis-1 pl-4"
+        justify="end"
+        onClick={handleClick}
+      >
+        <FiMenu />
       </NavbarContent>
       <NavbarMenu>
         <div className="mx-4 mt-2 flex flex-col gap-2">
