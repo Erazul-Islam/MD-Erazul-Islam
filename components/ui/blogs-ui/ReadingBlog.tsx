@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
-import { Card, CardFooter, Image, Button } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import Link from "next/link";
+
 import { BackgroundGradient } from "../background-gradient";
 
 export default function ReadingBlog() {
@@ -39,11 +40,11 @@ export default function ReadingBlog() {
           className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900"
         >
           <Image
-            src={one.image}
             alt="jordans"
-            height="400"
-            width="400"
             className="object-contain"
+            height="400"
+            src={one.image}
+            width="400"
           />
           <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
             {one.name}

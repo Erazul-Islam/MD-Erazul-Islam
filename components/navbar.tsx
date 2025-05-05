@@ -1,7 +1,4 @@
-/* eslint-disable import/order */
-/* eslint-disable prettier/prettier */
-
-"use client"
+"use client";
 
 import {
   Navbar as NextUINavbar,
@@ -12,29 +9,26 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
-import { motion } from "framer-motion"
-import { Link as ScrollLink } from 'react-scroll';
-;import { siteConfig } from "@/config/site";
+import { motion } from "framer-motion";
+import { Link as ScrollLink } from "react-scroll";
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
+
+import { siteConfig } from "@/config/site";
 import ContactIcon from "@/shared/icons/icons";
 
-
 export const Navbar = () => {
-
   const router = useRouter();
 
-
   const handleLinkClick = () => {
-
-    router.push('/');
+    router.push("/");
   };
 
   const underlineVariants = {
     initial: { width: 0 },
     whileHover: {
-      width: '100%',
-      transition: { duration: 0.3, ease: 'easeInOut' },
+      width: "100%",
+      transition: { duration: 0.3, ease: "easeInOut" },
     },
   };
 
@@ -64,7 +58,7 @@ export const Navbar = () => {
               >
                 <ScrollLink
                   className={clsx(
-                    'cursor-pointer text-default-800 hover:text-pink-600'
+                    "cursor-pointer text-default-800 hover:text-pink-600",
                   )}
                   color="black"
                   duration={500}
@@ -86,7 +80,7 @@ export const Navbar = () => {
         </div>
       </NavbarContent>
       <NavbarContent justify="center">
-        <ContactIcon/>
+        <ContactIcon />
       </NavbarContent>
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
         <NavbarMenuToggle />
