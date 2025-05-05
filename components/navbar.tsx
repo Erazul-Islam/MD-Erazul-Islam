@@ -3,11 +3,8 @@
 import {
   Navbar as NextUINavbar,
   NavbarContent,
-  NavbarMenu,
   NavbarItem,
-  NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Link } from "@nextui-org/link";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { useRouter } from "next/navigation";
@@ -45,7 +42,7 @@ export const Navbar = () => {
   };
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar maxWidth="xl" position="static">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         {/* <NavbarBrand className="gap-3 max-w-fit">
           <Logo />
@@ -95,26 +92,6 @@ export const Navbar = () => {
       >
         <FiMenu />
       </NavbarContent>
-      <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                size="lg"
-              >
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
-        </div>
-      </NavbarMenu>
     </NextUINavbar>
   );
 };
