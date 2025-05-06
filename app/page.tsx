@@ -9,7 +9,7 @@ export default function Home() {
     >
       <Cursor />
       <div className="max-w-7xl flex flex-col md:flex-row justify-between md:px-6 mx-auto">
-        <div className="md:pt-[20%] text-center md:text-left px-4 md:px-0 md:text-5xl order-2 md:order-1">
+        <div className="md:pt-[20%] py-10 md:py-0 text-center md:text-left px-4 md:px-0 md:text-5xl text-xl order-2 md:order-1">
           <span>Hi,</span>
           <div className="md:py-8 py-4">I am Md Erazul Islam, a</div>
           <div>

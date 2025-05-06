@@ -57,7 +57,7 @@ const ChangingTexts: React.FC<changingTextProps> = ({ texts }) => {
   }, [currentInex]);
 
   return (
-    <div ref={textWrapper} className="text-pink-600">
+    <div ref={textWrapper} className="text-pink-600 text-3xl md:text-5xl">
       {splitTextIntoSpans(texts[currentInex])}
     </div>
   );
