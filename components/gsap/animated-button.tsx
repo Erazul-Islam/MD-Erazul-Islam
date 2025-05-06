@@ -67,7 +67,7 @@ const AnimatedButton: React.FC<buttonProps> = ({ href, label }) => {
     <div className="relative flex items-center">
       <div
         ref={leftArrowRef}
-        className="bg-red-600 h-12 w-12 rounded-full flex items-center justify-center opacity-0 absolute left-[-44px] will-change-transform"
+        className="bg-pink-600  h-12 w-12 rounded-full flex items-center justify-center opacity-0 absolute left-[-44px] will-change-transform"
       >
         <svg
           ref={leftArrowSvg}
@@ -98,7 +98,7 @@ const AnimatedButton: React.FC<buttonProps> = ({ href, label }) => {
 
       <div
         ref={rightArrowRef}
-        className="bg-red-600 h-12 w-12 rounded-full flex items-center justify-center relative z-20 will-change-transform"
+        className="bg-pink-600  h-12 w-12 rounded-full flex items-center justify-center relative z-20 will-change-transform"
       >
         <svg
           ref={rightArrowSvg}

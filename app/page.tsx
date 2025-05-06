@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
 import AnimatedButton from "@/components/gsap/animated-button";
 import ChangingTexts from "@/components/gsap/changing-text";
+import FloatingText from "@/components/gsap/floating-text";
 import Cursor from "@/components/ui/cursor/Cursor";
 import ContactIcon from "@/shared/icons/icons";
 
@@ -40,10 +41,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="order-1 md:order-2">
+        <div className="order-1 relative md:order-2">
+          <div className="absolute z-0 md:top-64 top-36 md:left-28 left-10">
+            <FloatingText
+              className="md:text-6xl text-4xl "
+              text="Web Developer"
+            />
+          </div>
           <img
             alt="taosif"
-            className="max-h-screen w-full max-w-md md:max-w-full"
+            className="max-h-screen relative z-10 w-full max-w-md md:max-w-full"
             src="demo.png"
           />
         </div>
