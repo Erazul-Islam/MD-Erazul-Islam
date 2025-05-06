@@ -55,7 +55,7 @@ export const Navbar = () => {
               >
                 <ScrollLink
                   className={clsx(
-                    "cursor-pointer text-default-800 hover:text-pink-600"
+                    "cursor-pointer text-default-800 hover:text-pink-600",
                   )}
                   color="black"
                   duration={500}
@@ -84,7 +84,7 @@ export const Navbar = () => {
       </NavbarContent>
       <NavbarMenu>
         {siteConfig.navItems.map((item) => (
-          <div key={item.label}></div>
+          <div key={item.label} />
         ))}
       </NavbarMenu>
     </NextUINavbar>
