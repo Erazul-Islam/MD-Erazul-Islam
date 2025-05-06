@@ -84,7 +84,7 @@ export const Navbar = () => {
       </NavbarContent>
       <NavbarMenu>
         {siteConfig.navItems.map((item) => (
-          <div key={item.label} />
+          <div key={item.href}>{item.label}</div>
         ))}
       </NavbarMenu>
     </NextUINavbar>
