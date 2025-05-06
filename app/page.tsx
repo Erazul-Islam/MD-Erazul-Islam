@@ -1,6 +1,9 @@
+"use client"
+
 import AnimatedButton from "@/components/gsap/animated-button";
 import ChangingTexts from "@/components/gsap/changing-text";
 import Cursor from "@/components/ui/cursor/Cursor";
+import ContactIcon from "@/shared/icons/icons";
 
 export default function Home() {
   return (
@@ -10,7 +13,7 @@ export default function Home() {
     >
       <Cursor />
       <div className="max-w-7xl flex flex-col md:flex-row justify-between md:px-6 mx-auto">
-        <div className="md:pt-[20%] py-10 md:py-0 text-center md:text-left px-4 md:px-0 md:text-5xl text-xl order-2 md:order-1">
+        <div className="md:pt-[15%] py-10 md:py-0 text-center md:text-left px-4 md:px-0 md:text-5xl text-xl order-2 md:order-1">
           <span className="text-base">Hi,</span>
           <div className="md:py-8 py-4">I am Md Erazul Islam, a</div>
           <div>
@@ -29,6 +32,12 @@ export default function Home() {
               }
               label={"Resume"}
             />
+          </div>
+          <div className="hidden md:block">
+            <h1 className="pt-4 md:pt-8 text-base">Find me on</h1>
+            <div>
+              <ContactIcon />
+            </div>
           </div>
         </div>
         <div className="order-1 md:order-2">
