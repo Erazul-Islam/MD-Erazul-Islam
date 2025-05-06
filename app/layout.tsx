@@ -8,7 +8,6 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
-import SmoothScroller from "@/components/ui/scroll/Scrool";
 import Footer from "@/shared/Footer/Footer";
 
 interface RootLayout {
@@ -59,20 +58,19 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen">
+          <div>
             <Navbar />
-            <SmoothScroller />
             <div id="home">{children}</div>
-            <div id="skills">{skills}</div>
-            <div id="experience">{experience}</div>
-            <div className="mx-auto" id="projects">
+            {/* <div id="skills">{skills}</div> */}
+            {/* <div id="experience">{experience}</div> */}
+            {/* <div className="mx-auto" id="projects">
               {projects}
-            </div>
-            <div id="blogs">{blogs}</div>
-            <div id="contact">{contact}</div>
-            <div>
+            </div> */}
+            {/* <div id="blogs">{blogs}</div> */}
+            {/* <div id="contact">{contact}</div> */}
+            {/* <div>
               <Footer />
-            </div>
+            </div> */}
           </div>
         </Providers>
       </body>

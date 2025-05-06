@@ -4,13 +4,13 @@ import {
   Navbar as NextUINavbar,
   NavbarContent,
   NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
 } from "@nextui-org/navbar";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { useRouter } from "next/navigation";
 import clsx from "clsx";
-import { FiMenu } from "react-icons/fi";
-import { useState } from "react";
 
 import { siteConfig } from "@/config/site";
 import ContactIcon from "@/shared/icons/icons";
@@ -19,12 +19,6 @@ export const Navbar = () => {
   const router = useRouter();
   const handleLinkClick = () => {
     router.push("/");
-  };
-
-  const [open, setOpen] = useState(false);
-
-  const handleClick = () => {
-    setOpen(true);
   };
 
   const underlineVariants = {
@@ -42,7 +36,7 @@ export const Navbar = () => {
   };
 
   return (
-    <NextUINavbar maxWidth="xl" position="static">
+    <NextUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         {/* <NavbarBrand className="gap-3 max-w-fit">
           <Logo />
@@ -61,7 +55,7 @@ export const Navbar = () => {
               >
                 <ScrollLink
                   className={clsx(
-                    "cursor-pointer text-default-800 hover:text-pink-600",
+                    "cursor-pointer text-default-800 hover:text-pink-600"
                   )}
                   color="black"
                   duration={500}
@@ -85,13 +79,14 @@ export const Navbar = () => {
       <NavbarContent justify="center">
         <ContactIcon />
       </NavbarContent>
-      <NavbarContent
-        className="sm:hidden basis-1 pl-4"
-        justify="end"
-        onClick={handleClick}
-      >
-        <FiMenu />
+      <NavbarContent className="sm:hidden" justify="end">
+        <NavbarMenuToggle />
       </NavbarContent>
+      <NavbarMenu>
+        {siteConfig.navItems.map((item) => (
+          <div key={item.label}></div>
+        ))}
+      </NavbarMenu>
     </NextUINavbar>
   );
 };
