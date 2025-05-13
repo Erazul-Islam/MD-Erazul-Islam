@@ -36,7 +36,7 @@ export const Navbar = () => {
   };
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar maxWidth="xl" position="static">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         {/* <NavbarBrand className="gap-3 max-w-fit">
           <Logo />

@@ -60,7 +60,7 @@ export default function RootLayout({
           <div>
             <Navbar />
             <div id="home">{children}</div>
-            {/* <div id="skills">{skills}</div> */}
+            <div id="skills">{skills}</div>
             {/* <div id="experience">{experience}</div> */}
             {/* <div className="mx-auto" id="projects">
               {projects}
