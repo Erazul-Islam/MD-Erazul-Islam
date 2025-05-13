@@ -63,13 +63,13 @@ export default function RootLayout({
             <div id="home">{children}</div>
             <div id="skills">{skills}</div>
             <div id="experience">{experience}</div>
-            <div className="mx-auto" id="projects">
+            <div className="px-12" id="projects">
               {projects}
             </div>
-            <div id="blogs">{blogs}</div>
-            <div id="contact">{contact}</div>
+            {/* <div id="blogs">{blogs}</div> */}
+            {/* <div id="contact">{contact}</div> */}
             <div>
-              <Footer />
+              {/* <Footer /> */}
             </div>
           </div>
         </Providers>

@@ -18,7 +18,7 @@ import {
   SiSocketdotio,
 } from "react-icons/si";
 
-import SkillsCard from "./skills-card";
+import SkillsCardFrontEnd from "./skills-card";
 
 import { SkillsCategory } from "@/types";
 
@@ -50,125 +50,8 @@ const skills: SkillsCategory = {
 
 export default function SkillSet() {
   return (
-    <section className="py-16 px-4 text-white" id="skills">
-      <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Vertical Center Line */}
-        <div className="absolute left-1/2 top-0 h-full w-1 bg-white/10 transform -translate-x-1/2 hidden md:block" />
-
-        {/* Frontend (Top Left) */}
-        <div className="space-y-6">
-          <SkillsCard skills={skills} />
-        </div>
-
-        {/* Backend (Top Right) */}
-        <div className="space-y-6">
-          <h3 className="text-2xl font-semibold border-b border-white/20 pb-2">
-            Backend
-          </h3>
-          <div className="space-y-3">
-            {skills.backend.map(({ skill, icon }, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <span className="text-green-400">{icon}</span>
-                <span>{skill}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Database (Bottom Left) */}
-        <div className="space-y-6 mt-8 md:mt-0">
-          <h3 className="text-2xl font-semibold border-b border-white/20 pb-2">
-            Database
-          </h3>
-          <div className="space-y-3">
-            {skills.database.map(({ skill, icon }, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <span className="text-yellow-400">{icon}</span>
-                <span>{skill}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Languages (Bottom Right) */}
-        <div className="space-y-6 mt-8 md:mt-0">
-          <h3 className="text-2xl font-semibold border-b border-white/20 pb-2">
-            Languages
-          </h3>
-          <div className="space-y-3">
-            {skills.languages.map(({ skill, icon }, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <span className="text-purple-400">{icon}</span>
-                <span>{skill}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+    <section className="mx-auto max-w-7xl md:px-6" id="skills">
+      <SkillsCardFrontEnd skills={skills} />
     </section>
   );
-}
-{
-  /* <div className="container mx-auto text-center">
-  <Tabs aria-label="Skill Categories" variant="bordered" color="danger">
-    <Tab key="frontend" title="Frontend">
-      <div className="mt-8 flex flex-wrap items-center gap-4 justify-center">
-        {skills.frontend.map((skill, index) => (
-          <div
-            key={index}
-            className=" flex items-center p-2 gap-2 justify-center border"
-          >
-            <div className="text-pink-700">{skill.icon}</div>
-            <h3 className="text-xl font-serif mt-2">{skill.skill}</h3>
-          </div>
-        ))}
-      </div>
-    </Tab>
-    <Tab key="backend" title="Backend">
-      <div className="mt-8 flex flex-wrap items-center gap-4 justify-center">
-        {skills.backend.map((skill, index) => (
-          <div
-            key={index}
-            className="flex items-center p-2 gap-2 justify-center border"
-          >
-            <div className="text-pink-700">{skill.icon}</div>
-            <div className="flex flex-col w-full">
-              <h3 className="text-xl font-serif  text-left">{skill.skill}</h3>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Tab>
-    <Tab key="database" title="Database">
-      <div className="mt-8 flex items-center gap-4 justify-center">
-        {skills.database.map((skill, index) => (
-          <div
-            key={index}
-            className="flex items-center p-2 gap-2 justify-center border"
-          >
-            <div className="text-pink-700">{skill.icon}</div>
-            <div className="flex flex-col w-full">
-              <h3 className="text-xl font-serif  text-left">{skill.skill}</h3>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Tab>
-    <Tab key="languages" title="Languages">
-      <div className="mt-8 flex items-center gap-4 justify-center">
-        {skills.languages.map((skill, index) => (
-          <div
-            key={index}
-            className="flex items-center p-2 gap-2 justify-center border"
-          >
-            <div className="text-pink-700">{skill.icon}</div>
-            <div className="flex flex-col w-full">
-              <h3 className="text-xl font-serif  text-left">{skill.skill}</h3>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Tab>
-  </Tabs>
-</div>; */
 }
