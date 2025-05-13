@@ -19,6 +19,9 @@ import {
 } from "react-icons/si";
 
 import SkillsCardFrontEnd from "./skills-card";
+import SkillsCardBackEnd from "./skills-backend-card";
+import SkillsCardDatabase from "./skills-database-card";
+import SkillsCardLanguage from "./skills-language";
 
 import { SkillsCategory } from "@/types";
 
@@ -50,8 +53,13 @@ const skills: SkillsCategory = {
 
 export default function SkillSet() {
   return (
-    <section className="mx-auto max-w-7xl md:px-6" id="skills">
-      <SkillsCardFrontEnd skills={skills} />
+    <section className="mx-auto max-w-7xl min-h-screen md:px-6" id="skills">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-4 sm:grid-cols-2 grid-cols-1">
+        <SkillsCardFrontEnd skills={skills} />
+        <SkillsCardBackEnd skills={skills} />
+        <SkillsCardDatabase skills={skills} />
+        <SkillsCardLanguage skills={skills} />
+      </div>
     </section>
   );
 }

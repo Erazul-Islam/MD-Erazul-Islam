@@ -3,14 +3,14 @@ import React from "react";
 
 import { SkillsCardProps } from "@/types";
 
-const SkillsCardFrontEnd: React.FC<SkillsCardProps> = ({ skills }) => {
+const SkillsCardLanguage: React.FC<SkillsCardProps> = ({ skills }) => {
   return (
     <div className=" rounded-xl max-w-xs  shadow-lg hover:shadow-2xl transition-all duration-300">
       <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-        Frontend Skills
+        Languages
       </h2>
       <div className="space-y-3">
-        {skills.frontend?.map((one, i) => (
+        {skills.languages?.map((one, i) => (
           <div
             key={i}
             className="flex items-center justify-between p-3 bg-gray-900 rounded-lg hover:bg-gray-800 transition-colors duration-200"
@@ -24,4 +24,4 @@ const SkillsCardFrontEnd: React.FC<SkillsCardProps> = ({ skills }) => {
   );
 };
 
-export default SkillsCardFrontEnd;
+export default SkillsCardLanguage;

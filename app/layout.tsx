@@ -8,7 +8,6 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
-import Footer from "@/shared/Footer/Footer";
 
 interface RootLayout {
   children: ReactNode;
@@ -68,9 +67,7 @@ export default function RootLayout({
             </div>
             {/* <div id="blogs">{blogs}</div> */}
             {/* <div id="contact">{contact}</div> */}
-            <div>
-              {/* <Footer /> */}
-            </div>
+            <div>{/* <Footer /> */}</div>
           </div>
         </Providers>
       </body>
