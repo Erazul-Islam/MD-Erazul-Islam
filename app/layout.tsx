@@ -8,6 +8,7 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
+import Footer from "@/shared/Footer/Footer";
 
 interface RootLayout {
   children: ReactNode;
@@ -40,7 +41,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-  about,
+  // about,
   skills,
   projects,
   blogs,
@@ -61,15 +62,15 @@ export default function RootLayout({
             <Navbar />
             <div id="home">{children}</div>
             <div id="skills">{skills}</div>
-            {/* <div id="experience">{experience}</div> */}
-            {/* <div className="mx-auto" id="projects">
+            <div id="experience">{experience}</div>
+            <div className="mx-auto" id="projects">
               {projects}
-            </div> */}
-            {/* <div id="blogs">{blogs}</div> */}
-            {/* <div id="contact">{contact}</div> */}
-            {/* <div>
+            </div>
+            <div id="blogs">{blogs}</div>
+            <div id="contact">{contact}</div>
+            <div>
               <Footer />
-            </div> */}
+            </div>
           </div>
         </Providers>
       </body>

@@ -20,7 +20,9 @@ import {
 
 import SkillsCard from "./skills-card";
 
-const skills = {
+import { SkillsCategory } from "@/types";
+
+const skills: SkillsCategory = {
   frontend: [
     { skill: "HTML", level: 95, icon: <FaHtml5 size={30} /> },
     { skill: "CSS", level: 85, icon: <FaCss3 size={30} /> },

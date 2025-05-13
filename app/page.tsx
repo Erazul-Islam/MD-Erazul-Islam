@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import AnimatedButton from "@/components/gsap/animated-button";
 import ChangingTexts from "@/components/gsap/changing-text";
 import FloatingText from "@/components/gsap/floating-text";
@@ -48,11 +50,15 @@ export default function Home() {
               text="Web Developer"
             />
           </div>
-          <img
-            alt="taosif"
-            className="max-h-screen relative z-10 w-full max-w-md md:max-w-full"
-            src="demo.png"
-          />
+          <div className="relative z-10 w-full max-h-screen">
+            <Image
+              alt="taosif"
+              className="w-full max-w-md md:max-w-full object-contain"
+              height={1600}
+              src="/demo.png"
+              width={800}
+            />
+          </div>
         </div>
       </div>
     </section>

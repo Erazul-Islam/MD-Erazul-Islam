@@ -2,11 +2,9 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-type skillsProps = {
-  skills: {};
-};
+import { SkillsCardProps } from "@/types";
 
-const SkillsCard = ({ skills }) => {
+const SkillsCard: React.FC<SkillsCardProps> = ({ skills }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const pathRef = useRef<SVGPathElement>(null);
 
