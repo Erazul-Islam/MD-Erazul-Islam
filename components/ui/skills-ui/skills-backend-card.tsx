@@ -5,7 +5,7 @@ import { SkillsCardProps } from "@/types";
 
 const SkillsCardBackEnd: React.FC<SkillsCardProps> = ({ skills }) => {
   return (
-    <div className=" rounded-xl max-w-xs  shadow-lg hover:shadow-2xl transition-all duration-300">
+    <div className=" rounded-xl max-w-xs w-full shadow-lg hover:shadow-2xl">
       <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
         Backend Skills
       </h2>

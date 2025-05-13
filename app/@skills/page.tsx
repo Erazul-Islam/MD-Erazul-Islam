@@ -10,7 +10,6 @@ import FloatingText from "@/components/gsap/floating-text";
 const Skills = () => {
   return (
     <div
-    //   style={{ backgroundImage: "url('/breadcum-bg.png')" }}
     >
       <FloatingText className="font-serif py-8 text-pink-800 text-center text-3xl" text="Technical Expertise"/>
       <SkillSet />

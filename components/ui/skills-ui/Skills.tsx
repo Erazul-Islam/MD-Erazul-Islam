@@ -53,8 +53,8 @@ const skills: SkillsCategory = {
 
 export default function SkillSet() {
   return (
-    <section className="mx-auto max-w-7xl min-h-screen md:px-6" id="skills">
-      <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-4 sm:grid-cols-2 grid-cols-1">
+    <section className="mx-auto max-w-7xl md:px-6" id="skills">
+      <div className="grid px-4 sm:px-0 lg:grid-cols-4 md:grid-cols-3 gap-4 sm:grid-cols-2 grid-cols-1">
         <SkillsCardFrontEnd skills={skills} />
         <SkillsCardBackEnd skills={skills} />
         <SkillsCardDatabase skills={skills} />
