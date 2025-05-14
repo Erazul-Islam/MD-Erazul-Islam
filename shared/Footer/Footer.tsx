@@ -1,113 +1,151 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable react/jsx-sort-props */
-"use client"
-
-import { motion } from "framer-motion";
-
-import ContactIcon from "../icons/icons";
-
+"use client";
+import {
+  Mail,
+  MapPin,
+  Phone,
+  Instagram,
+  Linkedin,
+  Twitter,
+  Facebook,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
-    return (
-        <footer className=" text-gray-300 font-serif lg:mt-12 py-10">
-            <div className="lg:ml-[240px]">
-                <motion.div
-                    className="container  px-6 grid grid-cols-1 lg:grid-cols-3 gap-"
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                    viewport={{ once: true }}
-                >
-                    {/* About Section */}
-                    <motion.div
-                        className="space-y-4"
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <h3 className="text-lg sm:text-center font-semibold text-white">About Me</h3>
-                        <p className="text-sm">
-                            I am a passionate developer focused on creating impactful <br />
-                            digital solutions. Let’s connect and bring your ideas to life!
-                        </p>
-                    </motion.div>
+  return (
+    <footer className=" max-w-7xl mx-auto text-gray-300 font-serif lg:mt-12 py-10">
+      <div className="bg-black text-white flex flex-col">
+        <div className="container mx-auto px-4 py-12 flex-grow">
+          <div className="flex flex-col md:flex-row justify-between gap-12">
+            {/* Left Section */}
+            <div className="space-y-8 md:w-1/3">
 
-                    {/* Links Section */}
-                    <motion.div
-                        className="space-y-4"
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <h3 className="text-lg font-semibold sm:mt-4 sm:text-center text-white">Quick Links</h3>
-                        <ul className="space-y-2 sm:flex justify-between ">
-                            <li className="mt-4">
-                                <a href="#home" >
-                                    Home
-                                </a>
-                            </li>
-                            <li className="">
-                                <a href="#about" >
-                                    About
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#projects" >
-                                    Projects
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#blogs" >
-                                    Blogs
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#contact" >
-                                    Contact
-                                </a>
-                            </li>
-                        </ul>
-                    </motion.div>
+              <div className="space-y-2">
+                <h1 className="text-5xl font-bold">
+                  Get Ready <span className="font-normal">To Create</span>
+                </h1>
+                <h2 className="text-5xl font-normal">Great</h2>
+              </div>
 
-                    {/* Contact Section */}
-                    <motion.div
-                        className="space-y-4"
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <h3 className="text-lg font-semibold sm:text-center text-white">Get in Touch</h3>
-                        <ul className="space-y-2">
-                            <li className="mt-4">
-                                <a
-                                    href="mailto:erazul89@gmail.com"
-                                    className="hover:text-blue-400"
-                                >
-                                    📧 erazul89@gmail.com
-                                </a>
-                            </li>
-                            <li className="mt-4">
-                                <a href="tel:+1234567890" className="font-serif">
-                                    📞 +880 1843291218
-                                </a>
-                            </li>
-                            <li className="flex mt-4 space-x-4">
-                                <ContactIcon />
-                            </li>
-                        </ul>
-                    </motion.div>
-                </motion.div>
+              <div className="relative">
+                <input
+                  className="w-full bg-transparent border-b border-gray-600 py-2 pr-10 focus:outline-none focus:border-white"
+                  placeholder="Email Adress"
+                  type="email"
+                />
+                <div className="absolute right-0 top-1/2 -translate-y-1/2">
+                  <Mail className="w-5 h-5" />
+                </div>
+              </div>
             </div>
 
-            {/* Bottom Bar */}
-            <motion.div
-                className="mt-8 pt-4 text-center text-sm"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-            >
-                <p>© 2024 Md. Erazul Islam Taosif. All Rights Reserved.</p>
-            </motion.div>
-        </footer>
-    );
+            {/* Middle Section - Quick Links */}
+            <div className="md:w-1/4">
+              <h3 className="text-xl font-bold mb-6">Quick Link</h3>
+              <ul className="space-y-4">
+                <li>
+                  <Link className="hover:text-gray-300" href="#about">
+                    About Me
+                  </Link>
+                </li>
+                <li>
+                  <Link className="hover:text-gray-300" href="#projects">
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link className="hover:text-gray-300" href="#contact">
+                    Contact Me
+                  </Link>
+                </li>
+                <li>
+                  <Link className="hover:text-gray-300" href="#blog">
+                    Blog Post
+                  </Link>
+                </li>
+                <li>
+                  <Link className="hover:text-gray-300" href="#">
+                    Pricing
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Right Section - Contact */}
+            <div className="md:w-1/3">
+              <h3 className="text-xl font-bold mb-6">Contact</h3>
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-white" />
+                  </div>
+                  <span>example@gmail.com</span>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-white" />
+                  </div>
+                  <span>3891 Ranchview Dr. Richardson</span>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
+                    <Phone className="w-5 h-5 text-white" />
+                  </div>
+                  <span>01245789321</span>
+                </div>
+
+                <div className="flex gap-4 mt-8">
+                  <Link
+                    className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700"
+                    href="#"
+                  >
+                    <Instagram className="w-5 h-5" />
+                  </Link>
+                  <Link
+                    className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700"
+                    href="#"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </Link>
+                  <Link
+                    className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700"
+                    href="#"
+                  >
+                    <Twitter className="w-5 h-5" />
+                  </Link>
+                  <Link
+                    className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700"
+                    href="#"
+                  >
+                    <Facebook className="w-5 h-5" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="border-t border-gray-800">
+          <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 mb-4 md:mb-0">
+              ©InversWeb 2025 | All Rights Reserved
+            </div>
+            <div className="flex gap-6">
+              <Link className="text-gray-400 hover:text-white" href="#">
+                Trams & Condition
+              </Link>
+              <Link className="text-gray-400 hover:text-white" href="#">
+                Privacy Policy
+              </Link>
+              <Link className="text-gray-400 hover:text-white" href="#">
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 }

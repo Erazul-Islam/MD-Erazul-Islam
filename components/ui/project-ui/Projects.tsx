@@ -78,9 +78,7 @@ const Card3D = () => {
                             onMouseEnter={() => !isFlipped && setIsFlipped(true)} 
                             onMouseLeave={() => isFlipped && setIsFlipped(false)} 
                             onClick={toggleFlip} 
-                            whileHover={{
-                                scale: 1.05, 
-                            }}
+                            
                         >
                             <motion.div
                                 className="absolute inset-0 rounded-xl shadow-2xl  p-4 border border-pink-800  text-white flex flex-col justify-center items-center"
