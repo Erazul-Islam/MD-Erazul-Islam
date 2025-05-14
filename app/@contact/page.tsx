@@ -5,11 +5,12 @@
 import React from 'react';
 
 import ContactComponent from '@/components/ui/contact/Contact';
+import FloatingText from '@/components/gsap/floating-text';
 
 const Contact = () => {
     return (
         <div className='mt-12'>
-            <h1 className='font-serif text-4xl text-pink-800 text-center'>Contact</h1>
+            <FloatingText className='font-serif text-4xl text-pink-800 text-center' text='Contact' />
             <ContactComponent/>
         </div>
     );

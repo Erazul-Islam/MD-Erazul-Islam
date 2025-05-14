@@ -66,7 +66,7 @@ export default function RootLayout({
               {projects}
             </div>
             {/* <div id="blogs">{blogs}</div> */}
-            {/* <div id="contact">{contact}</div> */}
+            <div id="contact">{contact}</div>
             <div>{/* <Footer /> */}</div>
           </div>
         </Providers>
