@@ -1,18 +1,20 @@
-/* eslint-disable prettier/prettier */
+"use client";
 
-"use client"
+import React from "react";
 
-import React from 'react';
-
-import Card3D from '@/components/ui/project-ui/Projects';
+import Card3D from "@/components/ui/project-ui/Projects";
+import FloatingText from "@/components/gsap/floating-text";
 
 const Projects = () => {
-    return (
-        <div>
-            <h1 className='font-serif text-center text-3xl text-pink-700'>Projects</h1>
-            <Card3D/>
-        </div>
-    );
+  return (
+    <div>
+      <FloatingText
+        className="font-serif py-8 text-pink-800 text-center text-3xl"
+        text="Projects"
+      />
+      <Card3D />
+    </div>
+  );
 };
 
 export default Projects;
