@@ -11,7 +11,9 @@ const ExperiencePage = () => {
         className="font-serif py-8 text-pink-800 text-center text-3xl"
         text="Experience"
       />
-      <ExperienceCard />
+      <div className="px-2">
+        <ExperienceCard />
+      </div>
     </div>
   );
 };

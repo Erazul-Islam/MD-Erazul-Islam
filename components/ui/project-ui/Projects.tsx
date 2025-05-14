@@ -14,12 +14,28 @@ import React, { useState } from "react";
 const Card3D = () => {
     const projects = [
         {
+            name: "Redentity",
+            image: "https://res.cloudinary.com/djs5y6ey5/image/upload/v1747203926/Screenshot_2025-05-14_122512_wut8ks.png",
+            liveLink: "https://redentity-self.vercel.app/dashboard",
+            clientRepo: "https://github.com/CoderMohammadShuvo/redentity",
+            backendRepo: "https://github.com/CoderMohammadShuvo/redentity",
+            details: "This is a certificate storage platform where the users can upload and store their certificate securely",
+        },
+        {
             name: "Pet Care",
             image: "https://res.cloudinary.com/djs5y6ey5/image/upload/v1735572568/web_kn1l96.jpg",
             liveLink: "https://petcareclient-phi.vercel.app/",
             backendRepo: "https://github.com/Erazul-Islam/pet-and-care-backend",
             clientRepo: "https://github.com/Erazul-Islam/Pet-Care-FrontEnd",
             details: "Pet Care is a social media platform for pet enthusiasts to share tips, stories, and interact with posts, fostering a community for knowledge sharing and engagement around pet care",
+        },
+        {
+            name: "Protoja",
+            image: "https://res.cloudinary.com/djs5y6ey5/image/upload/v1747203575/Screenshot_2025-05-14_121552_avh28i.png",
+            liveLink: "https://protoja-six.vercel.app",
+            backendRepo: "https://github.com/CoderMohammadShuvo/Protoja",
+            clientRepo: "https://github.com/CoderMohammadShuvo/Protoja",
+            details: "Protoja is animated static site where we show case our work and services with client review.",
         },
         {
             name: "Auto Bike",
@@ -44,12 +60,12 @@ const Card3D = () => {
             clientRepo: "https://github.com/Erazul-Islam/The-Messenger-Client",
             backendRepo: "https://github.com/Erazul-Islam/The-Messenger",
             details: "This is a real time chat application where user can chat with a predefined group. Join the group and sent messages with each other",
-        },
+        }
     ];
 
     return (
         <div className="relative flex justify-center items-center overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-auto lg:gap-12 lg:mr-[65px] w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 w-full">
                 {projects.map((project, index) => {
                     const [isFlipped, setIsFlipped] = useState(false);
 
@@ -97,8 +113,8 @@ const Card3D = () => {
                                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-none text-white rounded-xl [transform:rotateY(180deg)] [backface-visibility:hidden]">
                                     <h1 className="text-xl font-bold">Project Details</h1>
                                     <p className="mt-2 ml-4 mr-4 text-center text-sm">{project.details}</p>
-                                    <div className="mt-4 ml-20">
-                                        <button className="mt-4 px-6 py-2 bg-none rounded-md border font-serif border-pink-800 text-white"><Link href={project.liveLink}>Live</Link></button>
+                                    <div className="mt-4 items-center">
+                                        <button className="mt-4 px-6 py-2 bg-none rounded-md border font-serif border-pink-800 text-white"><Link href={project.liveLink}>Live</Link></button><br />
                                         <button className="mt-4 px-6 py-2 bg-none rounded-md border font-serif border-pink-800 text-white"><Link href={project.clientRepo}>Client Repository</Link></button><br />
                                         <button className="mt-4 px-6 py-2 bg-none rounded-md border font-serif border-pink-800 text-white"><Link href={project.backendRepo}>Backend Repository</Link></button>
                                     </div>

@@ -7,7 +7,7 @@ import FloatingText from "@/components/gsap/floating-text";
 
 const Projects = () => {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <FloatingText
         className="font-serif py-8 text-pink-800 text-center text-3xl"
         text="Projects"
