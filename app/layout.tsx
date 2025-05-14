@@ -54,7 +54,7 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen font-serif overflow-x-hidden antialiased",
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>

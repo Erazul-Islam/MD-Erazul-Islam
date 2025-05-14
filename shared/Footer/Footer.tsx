@@ -18,7 +18,6 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between gap-12">
             {/* Left Section */}
             <div className="space-y-8 md:w-1/3">
-
               <div className="space-y-2">
                 <h1 className="text-5xl font-bold">
                   Get Ready <span className="font-normal">To Create</span>
