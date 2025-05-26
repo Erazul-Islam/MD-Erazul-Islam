@@ -86,7 +86,7 @@ const AnimatedButton: React.FC<buttonProps> = ({ href, label }) => {
         </svg>
       </div>
 
-      <Link
+      <a
         ref={scheduleRef}
         className="relative z-10 text-white bg-pink-600 font-medium px-6 py-2.5 rounded-full transition-colors text-xl will-change-transform"
         href={href}
@@ -94,7 +94,7 @@ const AnimatedButton: React.FC<buttonProps> = ({ href, label }) => {
         onMouseLeave={handleMouseLeave}
       >
         {label}
-      </Link>
+      </a>
 
       <div
         ref={rightArrowRef}
